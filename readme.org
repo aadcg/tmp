@@ -1,0 +1,7 @@
+Generated via:
+
+#+begin_src bash
+guix shell --container -D -f build-scripts/nyxt.scm --user=dummy-user guix -- make all NYXT_SUBMODULES=false
+
+guix pack -f deb -RR --no-grafts --compression=xz --symlink=/usr/local/bin/nyxt=bin/nyxt --root=nyxt-master.deb -L build-scripts/ nyxt
+#+end_src
